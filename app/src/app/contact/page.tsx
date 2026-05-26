@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const contactDetails = [
   {
     label: "Location",
-    value: "[City, State — Placeholder]",
+    value: "Manhattan Beach, CA",
     sub: "By appointment only",
   },
   {
