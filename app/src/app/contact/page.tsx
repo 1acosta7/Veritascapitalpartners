@@ -133,11 +133,7 @@ export default function ContactPage() {
             investment advice. Nothing herein should be construed as a
             solicitation or offer to buy or sell any security or financial
             product. Please consult a qualified financial, legal, or tax
-            professional before making any financial decisions.{" "}
-            <em>
-              [Placeholder — insert firm&rsquo;s full compliance and licensing
-              disclosure here before launch.]
-            </em>
+            professional before making any financial decisions.
           </p>
         </Container>
       </section>

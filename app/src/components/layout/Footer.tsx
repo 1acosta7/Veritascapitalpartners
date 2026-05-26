@@ -55,7 +55,7 @@ export default function Footer() {
               Contact
             </p>
             <div className="flex flex-col gap-3 text-sm font-body text-stone-gray/60">
-              <p>[City, State — Placeholder]</p>
+              <p>Manhattan Beach, CA</p>
               <a
                 href="mailto:info@veritascapitalpartners.com"
                 className="hover:text-alabaster transition-colors"
@@ -79,10 +79,7 @@ export default function Footer() {
             The information on this site is for educational and informational
             purposes only and does not constitute financial, legal, tax, or
             investment advice. Consult a qualified professional before acting on
-            any information herein.{" "}
-            <span className="italic">
-              [Placeholder — insert firm compliance and licensing disclaimer.]
-            </span>
+            any information herein.
           </p>
         </div>
       </Container>
