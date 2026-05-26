@@ -5,34 +5,34 @@ import { Container } from "@/components/ui/Container";
 
 const pillars = [
   {
-    title: "Wealth Protection",
+    title: "Life Insurance That Builds Wealth",
     description:
-      "Your wealth is more than a number — it's decades of discipline and sacrifice. We design protection structures that guard against the unexpected and preserve your family's financial continuity.",
+      "Most people think of life insurance as protection only. We structure it as a wealth-building tool — tax-advantaged, living-benefit-rich strategies that protect your family and grow your legacy simultaneously.",
   },
   {
-    title: "Income Strategies",
+    title: "Tax-Advantaged Growth",
     description:
-      "From diversified income planning to tax-efficient asset positioning, we help you create reliable, sustainable cash flow that supports your lifestyle today and your legacy tomorrow.",
+      "We position your assets for intelligent, long-term growth inside structures that minimize tax drag. More of what you earn stays with your family — now and across generations.",
   },
   {
-    title: "Financial Education",
+    title: "Market Education & Technical Analysis",
     description:
-      "We believe the most powerful financial tool you possess is knowledge. Our approach ensures you understand every strategy we implement — no black boxes, no fine print, no confusion.",
+      "Roxy brings CMT-level market education to everyday families. We teach you how markets actually move, how to read price and trends, and how to make confident, informed financial decisions — not just trust someone else to make them for you.",
   },
   {
-    title: "Family Stewardship",
+    title: "Strategic Money Management",
     description:
-      "True wealth includes your family's cohesion, values, and preparedness. We work alongside families to build governance, communication frameworks, and shared financial literacy.",
+      "Understanding how to manage money with intention is a skill most families are never taught. We close that gap — giving you frameworks, habits, and real knowledge that compound over time.",
   },
   {
-    title: "Legacy Planning",
+    title: "Legacy & Estate Planning",
     description:
-      "What do you want to leave behind? We help you articulate your legacy intentions and structure a plan — from estate coordination to philanthropic vision — that reflects who you are.",
+      "What do you want to leave behind? We help you build a real plan for what you pass down — financially, generationally, and in terms of values — so your legacy is protected and intentional.",
   },
   {
-    title: "Faith-Guided Principles",
+    title: "Long-Term Family Security",
     description:
-      "For those who view stewardship through a faith lens, we honor that. We integrate values-aligned financial planning, charitable giving structures, and purpose-driven wealth decisions.",
+      "Everything we build is designed to hold. Protection structures, income strategies, education frameworks, and legacy plans that keep your family secure through every stage of life.",
   },
 ];
 

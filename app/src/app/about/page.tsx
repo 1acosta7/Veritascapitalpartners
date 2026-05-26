@@ -30,14 +30,14 @@ const values = [
 
 const leaders = [
   {
-    name: "[Founder Name] — Placeholder",
-    role: "Co-Founder & Principal",
-    bio: "With [X] years of experience in wealth strategy and financial planning, [Name] brings a deep analytical approach to every client engagement. [He/She] is passionate about closing the financial literacy gap and ensuring every family has access to strategies that were once available only to the ultra-wealthy. [Placeholder — add real credentials, background, and personal story here.]",
+    name: "Mathew Acosta",
+    role: "Co-Founder · Licensed Life & Wealth Strategist",
+    bio: "Mathew leads Veritas's wealth protection and strategy practice. He specializes in life insurance structures that build generational wealth, tax-advantaged growth strategies, legacy and estate planning, and long-term family financial security. Mathew built Veritas on a conviction he holds deeply: that every family deserves protection-first wealth strategy — not a product pitch, not a one-size-fits-all plan, but real strategy rooted in their specific situation and goals.",
   },
   {
-    name: "[Founder Name] — Placeholder",
-    role: "Co-Founder & Principal",
-    bio: "A dedicated advocate for family-centered financial education, [Name] leads client relationships with empathy, clarity, and a commitment to long-term outcomes. [His/Her] background in [area] informs a distinctive approach to legacy planning and multigenerational stewardship. [Placeholder — add real credentials, background, and personal story here.]",
+    name: "Roxy Acosta",
+    role: "Co-Founder · CMT Candidate & Market Educator",
+    bio: "Roxy leads Veritas's education and market intelligence practice. As a CMT Candidate, she brings institutional-level technical analysis and market education to everyday families — the same tools and frameworks used by professional traders, made accessible and actionable. Her mission is simple: financial confidence for families who have never been taught how money and markets actually work.",
   },
 ];
 
@@ -142,19 +142,22 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {leaders.map((leader) => (
-              <div
-                key={leader.name}
-                className="bg-white border border-stone-gray/25 overflow-hidden"
-              >
-                {/* Photo placeholder */}
-                <div className="bg-stone-gray/20 aspect-[4/3] flex items-center justify-center">
-                  <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-obsidian/35">
-                    Photo Placeholder
-                  </p>
-                </div>
-                <div className="p-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+            {/* Joint founders photo */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/founders.png"
+              alt="The Founding Partners of Veritas Capital Partners"
+              className="w-full object-cover"
+            />
+
+            {/* Bios stacked */}
+            <div className="flex flex-col gap-10">
+              {leaders.map((leader, i) => (
+                <div
+                  key={leader.name}
+                  className={i > 0 ? "border-t border-stone-gray/30 pt-10" : ""}
+                >
                   <p className="font-sans text-[9px] tracking-[0.28em] uppercase text-bronze mb-1.5">
                     {leader.role}
                   </p>
@@ -165,8 +168,8 @@ export default function AboutPage() {
                     {leader.bio}
                   </p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </Container>
       </section>
