@@ -16,8 +16,8 @@ const contactDetails = [
   },
   {
     label: "Email",
-    value: "info@veritascapitalpartners.com",
-    href: "mailto:info@veritascapitalpartners.com",
+    value: "info@vertitascapitalpartners.net",
+    href: "mailto:info@vertitascapitalpartners.net",
   },
   {
     label: "Response Time",

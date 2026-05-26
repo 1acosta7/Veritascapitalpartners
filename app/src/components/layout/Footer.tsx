@@ -57,10 +57,10 @@ export default function Footer() {
             <div className="flex flex-col gap-3 text-sm font-body text-stone-gray/60">
               <p>Manhattan Beach, CA</p>
               <a
-                href="mailto:info@veritascapitalpartners.com"
+                href="mailto:info@vertitascapitalpartners.net"
                 className="hover:text-alabaster transition-colors"
               >
-                info@veritascapitalpartners.com
+                info@vertitascapitalpartners.net
               </a>
               <p>By appointment only</p>
             </div>
