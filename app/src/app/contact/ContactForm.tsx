@@ -14,6 +14,7 @@ interface FormState {
 interface FieldErrors {
   name?: string;
   email?: string;
+  phone?: string;
   message?: string;
 }
 
@@ -25,6 +26,7 @@ function validate(data: FormState): FieldErrors {
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
     errors.email = "Please enter a valid email address.";
   }
+  if (!data.phone.trim()) errors.phone = "Please enter your phone number.";
   if (!data.message.trim()) errors.message = "Please include a message.";
   return errors;
 }
@@ -128,13 +130,10 @@ export function ContactForm() {
         )}
       </div>
 
-      {/* Phone (optional) */}
+      {/* Phone */}
       <div>
         <label htmlFor="phone" className={labelClass}>
-          Phone Number{" "}
-          <span className="text-stone-gray/40 normal-case tracking-normal font-body text-xs">
-            (optional)
-          </span>
+          Phone Number <span className="text-bronze">*</span>
         </label>
         <input
           id="phone"
@@ -144,8 +143,13 @@ export function ContactForm() {
           value={form.phone}
           onChange={handleChange}
           placeholder="(000) 000-0000"
-          className={inputClass}
+          className={cn(inputClass, errors.phone && "border-red-400/60")}
         />
+        {errors.phone && (
+          <p className="mt-1.5 font-sans text-[9px] tracking-wide text-red-400/80">
+            {errors.phone}
+          </p>
+        )}
       </div>
 
       {/* Message */}
