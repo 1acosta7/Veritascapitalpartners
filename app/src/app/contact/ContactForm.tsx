@@ -204,8 +204,8 @@ export function ContactForm() {
       {submitError && (
         <p className="font-body text-red-400/80 text-sm">
           Something went wrong. Please try again or email us directly at{" "}
-          <a href="mailto:info@vertitascapitalpartners.net" className="underline">
-            info@vertitascapitalpartners.net
+          <a href="mailto:info@veritascapitalpartners.net" className="underline">
+            info@veritascapitalpartners.net
           </a>
           .
         </p>
