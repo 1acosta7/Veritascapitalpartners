@@ -46,6 +46,8 @@ export function ContactForm() {
   });
   const [errors, setErrors] = useState<FieldErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -57,15 +59,31 @@ export function ContactForm() {
     }
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const fieldErrors = validate(form);
     if (Object.keys(fieldErrors).length > 0) {
       setErrors(fieldErrors);
       return;
     }
-    // [Placeholder] — wire up your form handler / API route / email service here
-    setSubmitted(true);
+    setSubmitting(true);
+    setSubmitError(false);
+    try {
+      const res = await fetch("https://formspree.io/f/mjgznewo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setSubmitError(true);
+      }
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -178,10 +196,20 @@ export function ContactForm() {
       </div>
 
       <div className="pt-2">
-        <Button type="submit" variant="primary" size="lg">
-          Send Message
+        <Button type="submit" variant="primary" size="lg" disabled={submitting}>
+          {submitting ? "Sending…" : "Send Message"}
         </Button>
       </div>
+
+      {submitError && (
+        <p className="font-body text-red-400/80 text-sm">
+          Something went wrong. Please try again or email us directly at{" "}
+          <a href="mailto:info@vertitascapitalpartners.net" className="underline">
+            info@vertitascapitalpartners.net
+          </a>
+          .
+        </p>
+      )}
 
       <p className="font-body text-stone-gray/40 text-xs leading-relaxed">
         By submitting this form you agree to be contacted by Veritas Capital
