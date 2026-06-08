@@ -58,9 +58,6 @@ export default function RootLayout({
     >
       <body className="min-h-screen flex items-center justify-center bg-obsidian text-alabaster font-body">
         <div className="text-center px-6">
-          <p className="font-sans text-[10px] tracking-[0.32em] uppercase text-bronze mb-6">
-            Veritas Capital Partners
-          </p>
           <h1 className="font-display text-3xl md:text-4xl text-alabaster leading-tight mb-4">
             Site Temporarily Unavailable
           </h1>
