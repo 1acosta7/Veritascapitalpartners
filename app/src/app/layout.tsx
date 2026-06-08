@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
+  children: _children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
@@ -56,10 +56,18 @@ export default function RootLayout({
         "antialiased",
       ].join(" ")}
     >
-      <body className="min-h-screen flex flex-col bg-obsidian text-alabaster font-body">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="min-h-screen flex items-center justify-center bg-obsidian text-alabaster font-body">
+        <div className="text-center px-6">
+          <p className="font-sans text-[10px] tracking-[0.32em] uppercase text-bronze mb-6">
+            Veritas Capital Partners
+          </p>
+          <h1 className="font-display text-3xl md:text-4xl text-alabaster leading-tight mb-4">
+            Site Temporarily Unavailable
+          </h1>
+          <p className="font-body text-stone-gray text-sm leading-relaxed max-w-sm mx-auto">
+            We are currently undergoing maintenance. Please check back soon.
+          </p>
+        </div>
       </body>
     </html>
   );
